@@ -6,13 +6,13 @@ namespace exercicio1.ConsoleApp2
     {
         static void Main(string[] args)
         {
-
+            
         back2:
             Console.WriteLine("digite quantos numeros quer digitar");
             if (!(int.TryParse(Console.ReadLine(), out int numeros)) || numeros > 0 || numeros < 2000)
             {
                 int[] numeroArray = new int[numeros];
-                int[] s = new int[numeros];
+                bool[] s = new bool[2000];
                 for (int i = 0; i < numeroArray.Length; i++)
                 {
                 back:
@@ -35,12 +35,19 @@ namespace exercicio1.ConsoleApp2
                     int count = 0;
                     for (int j = 0; j < numeroArray.Length; j++)
                     {
-
                         if (numeroArray[i] == numeroArray[j])
+                        {
                             count = count + 1;
+                            
+                        }
+
+
                     }
-                  
-                    Console.WriteLine("\t\n " + numeroArray[i] + " occore " + count + " vezes");
+                    if (s[numeroArray[i]] == false)
+                    {
+                        Console.WriteLine("\t\n " + numeroArray[i] + " occore " + count + " vezes");
+                    }
+                    s[numeroArray[i]] = true;
                 }
                 Console.ReadKey();
             }
