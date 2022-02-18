@@ -12,6 +12,7 @@ namespace exercicio1.ConsoleApp2
             if (!(int.TryParse(Console.ReadLine(), out int numeros)) || numeros > 0 || numeros < 2000)
             {
                 int[] numeroArray = new int[numeros];
+                int[] s = new int[numeros];
                 for (int i = 0; i < numeroArray.Length; i++)
                 {
                 back:
