@@ -43,8 +43,8 @@ namespace ALenda.ConsoleApp2
                    string s = Console.ReadLine().ToLower();
                     if (s == "s")
                         break;
-                    else goto back;
-                    Console.ReadKey();
+                    else 
+                        goto back;
                 }
 
                 i = i + salto;
